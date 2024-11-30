@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barbearia Casarão 271</title>
+
+  <!-- Incluindo o CSS do Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- FontAwesome para ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Estilos personalizados -->
+  <style>
+    /* Estilo geral */
+    body {
+      background-color: #0a1f2b;
+      color: white;
+    }
+
+        /* Efeito ao passar o cursor */
+        .card-img-top:hover {
+      transform: scale(1.1); /* Aumenta a imagem */
+    }
+
+    .card-img-top {
+  width: 100%; /* Ocupa toda a largura do contêiner */
+  height: 200px; /* Define uma altura fixa */
+  object-fit: cover; /* Ajusta a imagem sem distorcer */
+  transition: transform 0.3s ease; /* Efeito de transição */
+  }
+
+
+      /* Estilo para os ícones sociais */
+  .social-icons a {
+    font-size: 30px;
+    margin: 0 10px;
+    color: #fff; /* Cor padrão branca */
+    transition: color 0.3s ease, transform 0.3s ease; /* Efeito suave para transição de cor */
+  }
+
+  /* Efeito ao passar o cursor sobre o Instagram */
+  .social-icons a:hover i.fa-instagram {
+    color: #e4405f; /* Cor vermelha para o Instagram */
+    transform: scale(1.1); /* Aumenta o ícone ao passar o mouse */
+  }
+
+  /* Efeito ao passar o cursor sobre o Facebook */
+  .social-icons a:hover i.fa-facebook {
+    color: #1877f2; /* Cor azul para o Facebook */
+    transform: scale(1.1); /* Aumenta o ícone ao passar o mouse */
+  }
+
+  /* Efeito ao passar o cursor sobre o WhatsApp */
+  .social-icons a:hover i.fa-whatsapp {
+    color: #25d366; /* Cor verde para o WhatsApp */
+    transform: scale(1.1); /* Aumenta o ícone ao passar o mouse */
+  }
+  
+    /* Estilo do ícone do WhatsApp */
+  .whatsapp-icon {
+    position: fixed;
+    bottom: 20px; /* Distância do fundo da tela */
+    right: 20px;  /* Distância da borda direita */
+    z-index: 1000; /* Garantir que fique sobre os outros elementos */
+}
+
+  .whatsapp-img {
+    width: 60px;  /* Ajuste o tamanho do ícone */
+    height: 60px; /* Ajuste o tamanho do ícone */
+    border-radius: 50%; /* Tornar o ícone arredondado */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombras para dar destaque */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito de transição suave */
+}
+
+/* Efeito de hover (quando passar o mouse sobre o ícone) */
+    .whatsapp-icon:hover .whatsapp-img {
+    transform: scale(1.1); /* Aumenta o ícone ao passar o mouse */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra mais forte para o hover */
+}
+
+
+
+    /* Navbar */
+    .navbar {
+      background-color: #000d19;
+    }
+
+    .navbar-brand img {
+      width: 120px;
+    }
+
+    .nav-link {
+      color: #fff !important;
+      text-transform: uppercase;
+    }
+
+    .nav-link:hover {
+      color: #adb5bd !important;
+    }
+
+    .navbar .social-icons a {
+      color: #fff;
+      margin: 0 10px;
+    }
+
+    .navbar .social-icons a:hover {
+      color: #adb5bd;
+    }
+   
+    .navbar.navbar-transparent {
+    background-color: rgba(0, 0, 0, 0.7); /* Transparência */
+    transition: background-color 0.3s ease;
+    }
+
+    /* Slider */
+    .carousel-item {
+  position: relative;
+  padding-top: 56.25%; /* Proporção 16:9 */
+}
+
+.carousel-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta a imagem ao contêiner */
+}
+
+
+    /* Seções */
+    .section {
+      padding: 60px 0;
+    }
+
+    .bg-light {
+      background-color: #0a1f2b !important;
+    }
+
+    .section h2 {
+      color: #fff;
+    }
+
+    footer {
+      background-color: #000d19;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    footer a {
+      color: #bbb;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="logo2.png" alt="Logo">
+    </a>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre Nós</a></li>
+        <li class="nav-item"><a class="nav-link" href="#profissionais">Profissionais</a></li>
+        <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+        <li class="nav-item"><a class="nav-link" href="#depoimentos">Depoimentos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#localizacao">Localização</a></li>
+        <!-- Updated 'Agendar' link to WhatsApp -->
+        <li class="nav-item"><a class="nav-link" href="https://wa.me/5519981134775?text=Olá%20gostaria%20de%20agendar%20um%20horário" target="_blank">Agendamento</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <style>
+    .carousel-item img {
+      width: 100%;
+      height: auto; /* Mantém a proporção original */
+    }
+  </style>
+  
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-wrap="true">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="foto1.jpeg" alt="Foto 1">
+      </div>
+      <div class="carousel-item">
+        <img src="foto2.jpeg" alt="Foto 2">
+      </div>
+      <div class="carousel-item">
+        <img src="foto3.jpeg" alt="Foto 3">
+      </div>
+      <div class="carousel-item">
+        <img src="foto4.jpeg" alt="Foto 4">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Próximo</span>
+    </button>
+  </div>
+  
+
+
+  <!-- Seções -->
+  <section id="sobre" class="section text-center">
+    <div class="container">
+      <h2>Sobre Nós</h2>
+      <p>Desde 2014, nossos profissionais atendem com excelência e desde 2022 em um novo endereço, oferecendo ainda mais conforto e comodidade para você.</p>
+    </div>
+  </section>
+
+<!-- Profissionais -->
+<section id="profissionais" class="section text-center">
+  <div class="container">
+    <h2>Profissionais</h2>
+    <div class="row justify-content-center">
+      <div class="col-sm-6 col-md-3 mb-4">
+        <div class="card bg-dark text-white" style="width: 200px; margin: 0 auto;">
+          <img src="hugo.png" class="card-img-top" alt="Profissional 1">
+          <div class="card-body">
+            <h5 class="card-title">Hugo</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3 mb-4">
+        <div class="card bg-dark text-white" style="width: 200px; margin: 0 auto;">
+          <img src="andre.png" class="card-img-top" alt="Profissional 2">
+          <div class="card-body">
+            <h5 class="card-title">André</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3 mb-4">
+        <div class="card bg-dark text-white" style="width: 200px; margin: 0 auto;">
+          <img src="fabio.png" class="card-img-top" alt="Profissional 3">
+          <div class="card-body">
+            <h5 class="card-title">Fabio</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3 mb-4">
+        <div class="card bg-dark text-white" style="width: 200px; margin: 0 auto;">
+          <img src="murilo.png" class="card-img-top" alt="Profissional 4">
+          <div class="card-body">
+            <h5 class="card-title">Murilo</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Serviços -->
+<section id="servicos" class="section text-center bg-light">
+  <div class="container">
+    <h2>Serviços</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-4 mb-4">
+        <div class="card bg-dark text-white">
+          <img src="corte.png" class="card-img-top" alt="Corte de Cabelo">
+          <div class="card-body">
+            <h5 class="card-title">Corte de Cabelo</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card bg-dark text-white">
+          <img src="barba.jpg" class="card-img-top" alt="Barba">
+          <div class="card-body">
+            <h5 class="card-title">Barba</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  
+
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="section text-center">
+      <div class="container">
+        <h2>Depoimentos</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card bg-dark text-white" style="width: 200px; margin: 0 auto;">
+              <img src="danilo.png" class="card-img-top" alt="Cliente 1">
+              <div class="card-body">
+                <h5 class="card-title">Danilo</h5>
+                <p class="card-text">"Serviço excelente, recomendo!"</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card bg-dark text-white" style="width: 200px; margin: 0 auto;">
+              <img src="iago.png" class="card-img-top" alt="Cliente 2">
+              <div class="card-body">
+                <h5 class="card-title">Thiago</h5>
+                <p class="card-text">"Atendimento de primeira!"</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card bg-dark text-white" style="width: 200px; margin: 0 auto;">
+              <img src="fernando.png" class="card-img-top" alt="Cliente 3">
+              <div class="card-body">
+                <h5 class="card-title">Fernando</h5>
+                <p class="card-text">"Ambiente incrível e profissionais excelentes."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- Localização -->
+<section id="localizacao" class="section text-center bg-light">
+  <div class="container">
+    <h2>Localização</h2>
+    <p>Rua Doutor Sampaio Peixoto, 271, Cambuí</p>
+    <p>Campinas - SP</p>
+
+    <!-- Mapa -->
+    <div class="mb-4">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.654017669042!2d-47.05752822039496!3d-22.889235825809973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8cf571285d6a7%3A0x2103db5c9f62739c!2sCasar%C3%A3o%20271!5e0!3m2!1spt-BR!2sbr!4v1733004383485!5m2!1spt-BR!2sbr" 
+              width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="row justify-content-center">
+      
+      <!-- Horário -->
+      <div class="col-md-4 text-start mb-4">
+        <h3>Horário de Funcionamento</h3>
+        <p><strong>Domingo:</strong> Fechado</p>
+        <p><strong>Segunda-feira:</strong> Fechado</p>
+        <p><strong>Terça-feira:</strong> 10:00 às 19:00</p>
+        <p><strong>Quarta-feira:</strong> 10:00 às 19:00</p>
+        <p><strong>Quinta-feira:</strong> 10:00 às 19:00</p>
+        <p><strong>Sexta-feira:</strong> 10:00 às 19:00</p>
+        <p><strong>Sábado:</strong> 09:00 às 15:00</p>
+      </div>
+
+      <!-- Contato -->
+      <div class="col-md-4 text-start mb-4">
+        <h3>Contato</h3>
+        <p><strong>Telefone:</strong> (19) 3307-8520</p>
+        <p><strong>Email:</strong> <a href="mailto:barbearia@casarao271.com">barbearia@casarao271.com</a></p>
+      </div>
+
+    </div>
+
+</section>
+
+
+  <a href="https://wa.me/5519981134775?text=Olá%20gostaria%20de%20agendar%20um%20horário" target="_blank" class="whatsapp-icon">
+    <img src="whatsapp1.png" alt="WhatsApp" class="whatsapp-img">
+ </a>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Barbearia Casarão. Todos os direitos reservados.</p>
+    <div class="footer-navbar">
+      <ul class="nav justify-content-center">
+        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre Nós</a></li>
+        <li class="nav-item"><a class="nav-link" href="#profissionais">Profissionais</a></li>
+        <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+        <li class="nav-item"><a class="nav-link" href="#depoimentos">Depoimentos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#localizacao">Localização</a></li>
+      </ul>
+    </div>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
+
+
+  <!-- Scripts do Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const navbar = document.querySelector('.navbar');
+  
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 50) {
+          navbar.classList.add('navbar-transparent');
+        } else {
+          navbar.classList.remove('navbar-transparent');
+        }
+      });
+    });
+
+  </script>
+  
+</body>
+</html>
