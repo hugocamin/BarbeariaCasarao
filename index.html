@@ -158,9 +158,15 @@
     footer a:hover {
       color: #fff;
     }
+
+    body { font-family: 'Roboto', sans-serif; }
+
   </style>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
+  
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
@@ -168,9 +174,9 @@
       <img src="logo2.png" alt="Logo">
     </a>
     <div class="social-icons">
-      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.instagram.com/casarao271/"><i class="fab fa-instagram"></i></a>
       <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://wa.me/5519981134775?text=Olá%20gostaria%20de%20agendar%20um%20horário"><i class="fab fa-whatsapp"></i></a>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -343,44 +349,46 @@
         </div>
       </div>
     </section>
-<!-- Localização -->
-<section id="localizacao" class="section text-center bg-light">
-  <div class="container">
-    <h2>Localização</h2>
-    <p>Rua Doutor Sampaio Peixoto, 271, Cambuí</p>
-    <p>Campinas - SP</p>
-
-    <!-- Mapa -->
-    <div class="mb-4">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.654017669042!2d-47.05752822039496!3d-22.889235825809973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8cf571285d6a7%3A0x2103db5c9f62739c!2sCasar%C3%A3o%20271!5e0!3m2!1spt-BR!2sbr!4v1733004383485!5m2!1spt-BR!2sbr" 
-              width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-
-    <div class="row justify-content-center">
-      
-      <!-- Horário -->
-      <div class="col-md-4 text-start mb-4">
-        <h3>Horário de Funcionamento</h3>
-        <p><strong>Domingo:</strong> Fechado</p>
-        <p><strong>Segunda-feira:</strong> Fechado</p>
-        <p><strong>Terça-feira:</strong> 10:00 às 19:00</p>
-        <p><strong>Quarta-feira:</strong> 10:00 às 19:00</p>
-        <p><strong>Quinta-feira:</strong> 10:00 às 19:00</p>
-        <p><strong>Sexta-feira:</strong> 10:00 às 19:00</p>
-        <p><strong>Sábado:</strong> 09:00 às 15:00</p>
+    <section id="localizacao" class="section text-center bg-light py-5">
+      <div class="container">
+        <h2 class="mb-4">Localização</h2>
+        <div class="row">
+          
+          <!-- Mapa -->
+          <div class="col-md-6 mb-4">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.654017669042!2d-47.05752822039496!3d-22.889235825809973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8cf571285d6a7%3A0x2103db5c9f62739c!2sCasar%C3%A3o%20271!5e0!3m2!1spt-BR!2sbr!4v1733004383485!5m2!1spt-BR!2sbr" 
+                  width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+    
+          <!-- Informações -->
+          <div class="col-md-6 d-flex align-items-center justify-content-center">
+            <div class="text-start">
+              <h3 class="mb-3">Endereço</h3>
+              <p>Rua Doutor Sampaio Peixoto, 271, Cambuí</p>
+              <p>Campinas - SP</p>
+              
+              <!-- Horário -->
+              <h3 class="mt-4 mb-3">Horário de Funcionamento</h3>
+              <ul class="list-group">
+                <li class="list-group-item"><strong>Domingo:</strong> Fechado</li>
+                <li class="list-group-item"><strong>Segunda-feira:</strong> Fechado</li>
+                <li class="list-group-item"><strong>Terça-feira:</strong> 10:00 às 19:00</li>
+                <li class="list-group-item"><strong>Quarta-feira:</strong> 10:00 às 19:00</li>
+                <li class="list-group-item"><strong>Quinta-feira:</strong> 10:00 às 19:00</li>
+                <li class="list-group-item"><strong>Sexta-feira:</strong> 10:00 às 19:00</li>
+                <li class="list-group-item"><strong>Sábado:</strong> 09:00 às 15:00</li>
+              </ul>
+    
+              <!-- Contato -->
+              <h3 class="mt-4 mb-3">Contato</h3>
+              <p><strong>Telefone:</strong> (19) 3307-8520</p>
+              <p><strong>Email:</strong> <a href="barbearia@casarao271.com">barbearia@casarao271.com</a></p>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <!-- Contato -->
-      <div class="col-md-4 text-start mb-4">
-        <h3>Contato</h3>
-        <p><strong>Telefone:</strong> (19) 3307-8520</p>
-        <p><strong>Email:</strong> <a href="mailto:barbearia@casarao271.com">barbearia@casarao271.com</a></p>
-      </div>
-
-    </div>
-
-</section>
-
+    </section>
+    
 
   <a href="https://wa.me/5519981134775?text=Olá%20gostaria%20de%20agendar%20um%20horário" target="_blank" class="whatsapp-icon">
     <img src="whatsapp1.png" alt="WhatsApp" class="whatsapp-img">
@@ -389,6 +397,8 @@
   <!-- Footer -->
   <footer>
     <p>&copy; 2024 Barbearia Casarão. Todos os direitos reservados.</p>
+    <p>Projeto site barbearia - Programação microinformatica - Profº Jaime Cazuhiro Ossada </p>
+    <p>feito por Victor Hugo Camine e Jefferson Vinicius Nunes.</p>
     <div class="footer-navbar">
       <ul class="nav justify-content-center">
         <li class="nav-item"><a class="nav-link" href="#sobre">Sobre Nós</a></li>
@@ -399,9 +409,9 @@
       </ul>
     </div>
     <div class="social-icons">
-      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.instagram.com/casarao271/"><i class="fab fa-instagram"></i></a>
       <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://wa.me/5519981134775?text=Olá%20gostaria%20de%20agendar%20um%20horário"><i class="fab fa-whatsapp"></i></a>
     </div>
   </footer>
 
